@@ -1,3 +1,2 @@
-const a = "10";
-
-console.log(navigator.language);
+alert("hello");
+console.log("10");
