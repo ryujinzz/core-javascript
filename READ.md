@@ -9,6 +9,6 @@
 학습이 완료된 항목은 체크박스로 표시 됩니다. 
 
 ### Basic
-- [x] Code Structure [바로가기](https://www.naver.com) 
+- [x] Code Structure [바로가기](https://github.com/ryujinzz/core-javascript/tree/01.core) 
 - [ ] Code Structure [바로가기](https://www.naver.com) 
 - [ ] Code Structure [바로가기](https://www.naver.com) 

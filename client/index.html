@@ -6,13 +6,38 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./assets/tiger.svg" type="image/x-icon" />
     <title>범샘과 하는 자바스크립트</title>
-    <script src="./chapter/core/01.codeStructure.js"></script>
+
+    <script src="./DOM/0.homework.js" defer></script>
+    <!-- <script src="./chapter/core/08-2.Operation.js" defer></script> -->
+    <script src="./lib/utils/typeof.js"></script>
+    <!-- <script src="./chapter/core/10-4.loop.js" defer></script> -->
+    <!-- <script src="./chapter/core/11-4.function.js" defer></script> -->
+    <!-- <script src="./chapter/core/100제.js" defer></script> -->
+    <!-- <script src="./chapter/core/ect.js" defer></script> -->
   </head>
 
   <body>
     <h1>
-      <span>hello</span>
-      <span>javascript</span>
+      <span class="first">hello</span>
+
+      <!-- 주석 -->
+      <span class="second">javascript</span>
+
+      <span class="third">javascript</span>
+
+      <hr />
+
+      <div>
+        <label for="todo">할일</label>
+        <input type="text" id="todo" />
+        <button class="register">등록</button>
+
+        <h4>해야할 목록</h4>
+        <ul class="todoList"></ul>
+      </div>
     </h1>
+
+    <div class="menu is-active"></div>
+    <a href="/" class="menu-button">❎</a>
   </body>
 </html>
