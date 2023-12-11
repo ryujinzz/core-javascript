@@ -6,27 +6,27 @@ const number = [10, "10", 6, 101, -90, 10_000];
 
 // ~ 보다 큼 또는 작음 → boolean
 let lessThen = number[0] < number[3];
-console.log(lessThen);
+console.log(lessThen); //true
 let greaterThen = number[0] > number[1];
-console.log(greaterThen);
+console.log(greaterThen); //false 암시적형변환 값은 같음
 
 // ~ 보다 크거나 작음 또는 같음 → boolean
 let lessThenAndEqual = number[4] <= number[1];
-console.log(lessThenAndEqual);
+console.log(lessThenAndEqual); //true
 let greaterThenAndEqual = number[5] >= number[0];
-console.log(greaterThenAndEqual);
+console.log(greaterThenAndEqual); //true
 
 // 동등(등급이나 정도가 같다) → boolean
 let equal = number[0] == number[1];
-console.log(`equal:`, equal);
+console.log(`equal:`, equal); //true 암시적 형변환
 
 // 다름(같지 않음) → boolean
 let inequal = number[0] !== number[1];
-console.log(`inequal:`, inequal);
+console.log(`inequal:`, inequal); //true 형도 같은가? 같지 않으므로
 
 // 동일(똑같다) → boolean
 let same = number[0] === number[1];
-console.log(same);
+console.log(same); //false 형은 다르다
 
 // 문자 비교
 // 사전편집(lexicographical) 순
@@ -44,5 +44,5 @@ console.log(same);
 // 6. ...
 // 7. 비교가 종료되었고, 문자열 길이도 같을 경우 두 문자열은 동일함으로 결론 도출
 
-// console.log('Design' <= 'Development');
-// console.log('디자인' <= '개발');
+console.log("Design" <= "Development"); //true
+console.log("디자인" <= "개발"); //false

@@ -5,13 +5,13 @@
 // let i = 0;
 
 // do {
-//   // console.log(i);
+//   console.log(i);
 
 //   if (i === 0) {
-//     // console.log("init");
+//     console.log("init");
 //   }
 //   i++;
-// } while (i < 5);
+// } while (i < 5); // 0,init,1,2,3,4
 
 // do ~ while 문 (역순환)
 // - prompt 창을 띄워 사용자로 하여금 순환 횟수를 요청
@@ -23,7 +23,7 @@
 // let repeat = prompt("몇번 반복하시겟습니까?", 0);
 
 // do {
-//  console.log(repeat);
+//   console.log(repeat);
 //   if (repeat < 0) {
 //     console.log("최초실행");
 //     break;
@@ -35,7 +35,7 @@
 // do ~ while 문 (순환)
 // - 위 do ~ while 문을 순방향으로 순환되도록 설정
 
-// let repeat = prompt("몇번 반복하시겟습니까?", 0);
+// let repeat = prompt("몇번 반복하시겟습니까?", 0); //10일때만 한정하여 나온 순방향 순환
 
 // let count = 0;
 
@@ -46,23 +46,23 @@
 //   console.log(++count);
 // } while (repeat--);
 
-// let first = document.querySelector(".first");
+let first = document.querySelector(".first");
 
-// do {
-//   first = first.nextSibling;
-// } while (first.nodeType !== document.ELEMENT_NODE); //뒷부분에 1을 넣어도 됨.
+do {
+  first = first.nextSibling;
+} while (first.nodeType !== document.ELEMENT_NODE); //뒷부분에 1을 넣어도 됨.
 
-// function next(node) {
-//   do {
-//     node = node.nextSibling;
-//   } while (node.nodeType !== 1);
+function next(node) {
+  do {
+    node = node.nextSibling;
+  } while (node.nodeType !== 1);
 
-//   return node;
-// }
+  return node;
+}
 
-// const second = next(first);
+const second = next(first);
 
-//prev(second) // first
+// prev(second) // first
 
 // let second = document.querySelector(".second");
 

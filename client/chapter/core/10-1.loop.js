@@ -5,7 +5,7 @@
 // let l = 10;
 
 // while (l) {
-//   console.log(--l);
+//   console.log(--l); // 9부터 0까지 나옴 l-- 후 감소일 때는 10부터 1까지 나옴
 // }
 
 const frontEndDev = [
@@ -20,12 +20,6 @@ const frontEndDev = [
 ];
 
 /* 프론트엔드 개발 집합 항목 출력 ---------------------------------------------- */
-// let i = 0;
-
-// while (i < frontEndDev.length) {
-//   console.log(frontEndDev[i]);
-//   i++;
-// }
 
 // console.log(frontEndDev[0]);
 // console.log(frontEndDev[1]);
@@ -39,6 +33,15 @@ const frontEndDev = [
 
 // while 문 (순환 : 순방향)
 
+// let i = 0;
+
+// while (i < frontEndDev.length) {
+//   console.log(frontEndDev[i]);
+//   i++;
+// }
+
+// while 문 (역순환 : 역방향)
+
 // let l = frontEndDev.length - 1;
 
 // while (l >= 0) {
@@ -46,19 +49,16 @@ const frontEndDev = [
 //   l--;
 // }
 
-// while 문 (역순환 : 역방향)
-
 // 값이 감소
 
-// let l = frontEndDev.length - 1;
+let l = frontEndDev.length - 1;
 
-// while(l >= 0){
+while (l >= 0) {
+  let value = frontEndDev[l];
 
-//   let value = frontEndDev[l];
+  console.log(value);
 
-//   console.log( value );
-
-//   l--
-// }
+  l--;
+}
 
 // 성능 진단 : 순환 vs. 역순환

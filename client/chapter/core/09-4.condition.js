@@ -2,12 +2,12 @@
 /* Nullish Coalescing Operator  */
 /* ---------------------------- */
 
-let emailAddress; //여기에 할당
+let emailAddress = "kdo2240k@naver.com"; //여기에 할당 //prompt("이메일을 입력하세요")
 let receivedEmailAddress;
-
 if (emailAddress === undefined || emailAddress === null) {
   receivedEmailAddress = "user@company.io";
 } else {
+  // let receivedEmailAddress = alert(`입력하신 이메일입니다.:${emailAddress}`);
   receivedEmailAddress = emailAddress;
 }
 
@@ -48,17 +48,17 @@ x &&= y; // x가 true 일때 y값을 x에 할당
 x ??= y; // x가 undefined, null 일때 y값을 x에 할당
 
 let title;
-title ||= "범쌤과 함께하는 JS 수업! ";
+title ||= "범쌤과 함께하는 JS 수업!";
 
 let person = {
   firstName: "DY",
   lastName: "KIM",
 };
 
-person.lastName &&= "sin";
+console.log((person.lastName &&= "KIM"));
 
 let user = {
-  userName: "starrowberry",
+  userName: "strawberry",
 };
 
-user.nickName ??= "blueberry";
+console.log((user.nickName ??= "blueberry"));

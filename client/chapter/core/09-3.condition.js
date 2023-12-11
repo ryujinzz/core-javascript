@@ -191,6 +191,7 @@ function weekend() {
   //   return "평일";
   // }
 
+  //위의 if문을 삼항식으로 표현하여 return 해줌
   return today.includes("토")
     ? "토요일"
     : today.includes("일")

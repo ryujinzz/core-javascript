@@ -25,10 +25,10 @@ let tiger = {
     this.prey = target;
     return `${target}에게 조용히 접근한다.`;
   },
-  __proto__: animal,
+  __proto__: animal, //이것과
 };
 
-// tiger.__proto__ = animal;
+// tiger.__proto__ = animal; //이것은 같은 의미로 animal을 부모로 지정해준다.
 
 const 백두산호랑이 = {
   color: "white",

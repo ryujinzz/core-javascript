@@ -32,27 +32,31 @@ console.log(AorB);
 // 부정 연산자
 let reverseValue = !value;
 
-//console.log(!value); //true
+console.log(!value); //true
 
 // 조건 처리
 
 // 첫번째 Falsy를 찾는 연산 (&&)
 let whichFalsy = true && " " && [] && { thisIsFalsy: false };
 
+console.log(whichFalsy); // 전부 true라서 마지막 것을 반환해줌
+
 // 첫번째 Truthy를 찾는 연산 (||)
 let whichTruthy = false || "" || [2, 3].length || { thiIsTruthy: true };
 
-function login() {
-  let user = prompt("whoIsthere?"); //.toLowerCase();
+console.log(whichTruthy); //결과는 3번째것이다.
 
-  if (!user) return;
-  //취소 버튼, esc 누르면 null이 뜸
+function login() {
+  let user = prompt("whoIsThere?"); //.toLowerCase();
+
+  if (!user) return; //return 값이 없으면 undefined
+  //취소 버튼, esc 누르면 null이 뜸 //에러 안 나게 처리
   // 어떤 값도 입력하지 않았을 경우 => 빈문자 ''
 
   if (user?.toLowerCase() === "admin") {
     let password = prompt("Password?");
 
-    if (password?.toLowerCase() === "themaster") {
+    if (password?.toLowerCase() === "theMaster") {
       console.log("로그인 성공 환영합니다");
     } else {
       console.log("비밀번호를 잘못 입력하셨습니다.");
@@ -65,6 +69,7 @@ function login() {
 }
 
 login();
+
 // else if (){
 // prompt('password?');}
 

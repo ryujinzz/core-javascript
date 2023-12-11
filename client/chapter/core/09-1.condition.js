@@ -21,9 +21,11 @@
 
 //       if (withWho === "you") {
 //         console.log("어머,,");
+//       } else {
+//         console.log("걘 누구야?");
 //       }
 //     } else {
-//       console.log("관심 없어.");
+//       console.log("그래 나도 관심 없어.");
 //     }
 //   } else {
 //     console.log("그래..");
@@ -34,15 +36,29 @@
 
 // if(){};
 
-// 영화 볼거니?
+//영화 볼거니?
 // let didToWatchMovie = "no";
 // let goingToWatchMovie = "yes";
 
-// let movieMessage = didToWatchMovie.includes("yes");
+// let movieMessage = didToWatchMovie.includes("yes")
 //   ? "어 그거 재밌더라"
-//   : goingTowatchMovie.includes("yes")
+//   : goingToWatchMovie.includes("yes")
 //     ? "너무 설렌다 같이 보자!"
 //     : "난 별로...";
+
+//위의 삼항식 if문으로 고치기
+
+// let didToWatchMovie = prompt("영화 봤니?");
+// if (!didToWatchMovie.includes("yes")) {
+//   let goingToWatchMovie = prompt("같이 보러갈래?");
+//   if (goingToWatchMovie.includes("yes")) {
+//     alert("너무 설렌다 같이 보자!");
+//   } else {
+//     alert("나도 별로...");
+//   }
+// } else {
+//   alert("어, 그거 재밌더라");
+// }
 
 // movieMessage.includes("응")
 //   ? "어 그거 재밌더라"
@@ -73,13 +89,13 @@
 //   }
 // }
 
-let movieMessage = prompt("그거 영화 봤오?");
-// 삼항 연산자
-movieMessage === "yes"
-  ? alert("어 그거 재밌더라")
-  : prompt("그럼 나랑 보러갈래?") === "yes"
-    ? alert("와 너무 설렌다 같이 보자!")
-    : alert("나도 별로");
+// let movieMessage = prompt("그거 영화 봤오?");
+// // 삼항 연산자
+// movieMessage === "yes"
+//   ? alert("어 그거 재밌더라")
+//   : prompt("그럼 나랑 보러갈래?") === "yes"
+//     ? alert("와 너무 설렌다 같이 보자!")
+//     : alert("나도 별로");
 
 // if 문(statement)
 
