@@ -5,6 +5,10 @@ module.exports = {
     node: true,
   },
   extends: "eslint:recommended",
+  globals: {
+    getNode: true,
+    getNodes: true,
+  },
   overrides: [
     {
       env: {
@@ -21,7 +25,7 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
     "no-empty": "warn",
   },
 };

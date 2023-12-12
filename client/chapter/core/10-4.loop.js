@@ -43,7 +43,7 @@ for (let key in javaScript) {
 // const tens = [10, 100, 1000, 10000];
 
 // for (let key in tens) {
-//   console.log(tens[key]);
+//   console.log(tens[key]); // 10, 100, 1000, 10000
 // } //Object.prototype.nickName = "tiger"; 때문에 다른 객체(배열)에도 이미 더럽혀져서 tiger가 나온다 ㅠㅠ
 
 const obj = {};
@@ -71,3 +71,8 @@ Object.defineProperties(obj, {
 console.log(obj);
 
 //이부분 뭐였지?
+
+let obj1 = { name: "철수", age: "20" };
+for (let key in obj1) {
+  console.log(key + ":" + obj1[key]);
+}
