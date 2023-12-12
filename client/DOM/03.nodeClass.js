@@ -2,6 +2,8 @@
 /* DOM Node Class                 */
 /* ------------------------------ */
 
+/* gsap */
+
 // Object
 //   ↓
 // EventTarget
