@@ -32,7 +32,7 @@ const template = `<li class="list"> 영화보기 </li>`;
 
 h1.insertAdjacentHTML("afterend", template);
 
-document.body.insertAdjacentHTML("beforeend", '<div class="zoo">김다영</div>');
+document.body.insertAdjacentHTML("beforeend", '<div class="home">김다영</div>');
 // - insertAdjacentHTML 얘가 제일 중요 별 3개정도
 // - insertAdjacentElement
 // - insertAdjacentText
@@ -42,29 +42,9 @@ document.body.insertAdjacentHTML("beforeend", '<div class="zoo">김다영</div>'
 // - "beforeend" – elem의 마지막 자식 요소 바로 다음에 html을 삽입
 // - "afterend" – elem 바로 다음에 html을 삽입
 
-insertBefore();
-insertAfter();
+// insertBefore();
+// insertAfter();
 
-insertFirst();
+// insertFirst();
 
-function insertBefore(node, text) {
-  if (typeof node === "string") node = getNode(node);
-  node.insertAdjacentHTML("beforbegin", text);
-}
-function insertFirst(node, text) {
-  if (typeof node === "string") node = getNode(node);
-  node.insertAdjacentHTML("afterbegin", text);
-}
-
-function insertAfter(node, text) {
-  if (typeof node === "string") node = getNode(node);
-  node.insertAdjacentHTML("afterend", text);
-}
-
-function insertLast(node, text) {
-  if (typeof node === "string") node = getNode(node);
-
-  node.insertAdjacentHTML("beforeend", text);
-}
-
-insertLast("h1", template);
+// insertLast("h1", template);
