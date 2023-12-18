@@ -1,20 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./assets/tiger.svg" type="image/x-icon" />
+    <title>범샘과 하는 자바스크립트</title>
+    <script src="./main.js" type="module"></script>
+    <!-- <script src="./lib/utils/typeOf.js"></script>
+    <script src="./lib/dom/insert.js"></script>
+    <script src="./lib/dom/clear.js"></script>
+    <script src="./lib/dom/getNode.js"></script> -->
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="shortcut icon" href="./assets/tiger.svg" type="image/x-icon" />
-  <title>범샘과 하는 자바스크립트 </title>
-  <script src="./main.js"></script>
-</head>
+  <body>
+    <form class="calculator">
+      <div class="first">
+        <label for="firstNumber">First Value</label>
+        <input type="number" name="first" id="firstNumber" required />
+      </div>
 
-<body>
-  <h1>
-    <span>hello</span>
-    <span>javascript</span>
-  </h1>
-</body>
+      <div class="operator">+</div>
 
+      <div class="second">
+        <label for="secondNumber">Second Value</label>
+        <input type="number" name="second" id="secondNumber" required />
+      </div>
+
+      <input id="clear" type="submit" value="clear" />
+
+      <div class="result">-</div>
+    </form>
+  </body>
 </html>
