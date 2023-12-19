@@ -3,6 +3,7 @@
 import { jujeobData } from "./data/data.js";
 import {
   clearContents,
+  copy,
   getNode,
   getRandom,
   insertLast,
@@ -51,8 +52,10 @@ function handleSubmit(e) {
 function handleCopy() {
   const text = result.textContent;
 
-  navigator.clipboard.writeText(text);
-  showAlert(".alert-success", "클립보드 복사 완료");
+  //promise가 리턴되는 명령어 이므로 .then을 써서 비동기통신의 여부를 판단한다.
+  copy(text).then(() => {
+    showAlert(".alert-success", "클립보드 복사 완료");
+  });
 }
 
 submit.addEventListener("click", handleSubmit);
