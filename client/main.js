@@ -1,4 +1,12 @@
-import { diceAnimation, getNode, getNodes, insertLast } from "./lib/index.js";
+import {
+  memo,
+  getNode,
+  getNodes,
+  endScroll,
+  insertLast,
+  clearContents,
+  diceAnimation,
+} from "./lib/index.js";
 
 // phase 1
 // dice 굴리기
@@ -48,9 +56,10 @@ function createItem(value) {
 
 function renderRecordItem() {
   //  주사위 눈값 가져오기
-  const diceValue = getNode("#cube").dataset.dice / 1;
+  const diceValue = memo("cube").dataset.dice / 1;
   //뿌려주기
   insertLast(".recordList tbody", createItem(diceValue));
+  endScroll(recordListWrapper);
 }
 
 function handleRecord() {
@@ -61,6 +70,9 @@ function handleRecord() {
 }
 function handleReset() {
   recordListWrapper.hidden = true;
+  clearContents(getNode("tbody"));
+  count = 0;
+  total = 0;
 }
 
 rollingButton.addEventListener("click", handleRollingDice);
