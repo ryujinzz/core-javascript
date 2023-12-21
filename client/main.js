@@ -9,6 +9,7 @@ import {
   renderSpinner,
   delayP,
   renderEmptyCard,
+  clearContents,
 } from "./lib/index.js";
 // xhrPromise.get("https://jsonplaceholder.typicode.com/users").then((res) => {
 //   res.forEach((item) => {
@@ -16,7 +17,7 @@ import {
 //   });
 // });
 
-const END_POINT = "https://jsonplaceholder.typicode.com/users";
+const END_POINT = "http://localhost:3000/users";
 //phase - 1
 
 const userCardInner = $(".user-card-inner");
@@ -25,7 +26,7 @@ const userCardInner = $(".user-card-inner");
 async function renderUserList() {
   renderSpinner(userCardInner);
   try {
-    await delayP(2000);
+    await delayP(1000);
     gsap.to(".loadingSpinner", {
       opacity: 0,
       onComplete() {
@@ -62,7 +63,47 @@ function handleDelete(e) {
   //아티클만 수집
   if (!article || !button) return;
   const id = article.dataset.index.slice(5);
-  tiger.delete(`${END_POINT}/${id}`);
+  tiger.delete(`${END_POINT}/${id}`).then(() => {
+    clearContents(userCardInner);
+    renderUserList();
+  });
 }
 
 userCardInner.addEventListener("click", handleDelete);
+
+const createButton = $(".create");
+const cancelButton = $(".cancel");
+const doneButton = $(".done");
+
+function handleCreate() {
+  gsap.to(".pop", { autoAlpha: 1 });
+}
+
+function handleCancel(e) {
+  e.stopPropagation();
+  gsap.to(".pop", { autoAlpha: 0 });
+}
+
+function handleDone(e) {
+  e.preventDefault();
+
+  const name = $("#nameField").value;
+  const email = $("#emailField").value;
+  const website = $("#siteField").value;
+
+  const obj = {
+    name,
+    email,
+    website,
+  };
+
+  tiger.post(END_POINT).then(() => {
+    clearContents(userCardInner);
+    renderUserList();
+    gsap.to(".pop", { autoAlpha: 0 });
+  });
+}
+
+createButton.addEventListener("click", handleCreate);
+cancelButton.addEventListener("click", handleCancel);
+doneButton.addEventListener("click", handleDone);
