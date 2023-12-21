@@ -97,7 +97,7 @@ function handleDone(e) {
     website,
   };
 
-  tiger.post(END_POINT).then(() => {
+  tiger.post(END_POINT, obj).then(() => {
     clearContents(userCardInner);
     renderUserList();
     gsap.to(".pop", { autoAlpha: 0 });
